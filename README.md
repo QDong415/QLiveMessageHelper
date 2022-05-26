@@ -10,12 +10,12 @@ ChatRoom in LiveRoom.Using the three kind of cache strategy and async in Handler
 
 ## 功能（优点）：
 - ✅采用3层缓存机制 + 异步解析ImageSpan。一秒内收到几百条消息依然不卡顿
-- ✅可配置RecyclerView最短刷新时间间隔
-- ✅可配置在短时间内如果收到太多消息可选择丢弃消息
-- ✅根据缓冲区消息数量选择不同的ScrollToBottom速度
-- ✅Demo中提供"底部还有XX条未读消息"的处理方式
-- ✅Demo中提供弹幕中仿抖音的"粉丝团"标签处理方式
-- ✅内存占用控制的很好，收到再多消息帧数也控制在55以上
+- ✅可配置RecyclerView最短刷新时间间隔 `如0.5秒只触发一次notify`
+- ✅可配置在短时间内如果收到太多消息可选择丢弃消息 `如0.5秒收到超过10条就丢弃了`
+- ✅根据缓冲区消息数量选择不同的ScrollToBottom速度 `用户体验细节`
+- ✅Demo中提供"底部还有XX条未读消息"的处理方式 `并解耦出来`
+- ✅Demo中提供弹幕中仿抖音的"粉丝团"标签处理方式 `我自己写的控件`
+- ✅内存占用控制的很好，1秒收到几百条消息 帧数也控制在55以上
 - ✅完美解耦，无内存泄漏，接入很简单
 
 ## 具体技术说明：
@@ -24,7 +24,7 @@ ChatRoom in LiveRoom.Using the three kind of cache strategy and async in Handler
 - 第三层缓存：model中的SpannableString。让用户手指滚动列表更顺畅，无需再次解析SpannableString<bar />
 - 额外缓存：解析标签ImageSpan时候全程只采用一个TextView，避免每次都new，json解析也是如此
 
-- 异步解析：解析完整的（3个）SpannableString在低性能手机上最慢需要20-40ms。会造成丢帧。本库采用HandlerThread解析<bar />
+- 异步解析：解析完整的（昵称前有3个标签）SpannableString在低性能手机上最慢需要20-40ms。会造成丢帧。本库采用HandlerThread解析<bar />
 - 提供策略模式解析标签ImageSpan，拓展性极强
 
 ## 效果gif图（Gif图有点卡，实际运行一点都不卡）：
