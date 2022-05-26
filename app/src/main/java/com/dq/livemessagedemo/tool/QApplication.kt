@@ -1,12 +1,6 @@
 package com.dq.livemessagedemo.tool
 
 import android.app.Application
-import android.util.Log
-import com.didichuxing.doraemonkit.DoKit
-import com.dq.livemessagedemo.model.LiveMessageIntrinsicModel
-import com.dq.livemessagedemo.model.LiveMessageModel
-import com.squareup.moshi.Moshi
-import java.util.*
 
 class QApplication : Application(){
 
@@ -24,7 +18,7 @@ class QApplication : Application(){
 
         instance = this
         socketManager = SocketManager()
-        DoKit.Builder(this).build()
+//        DoKit.Builder(this).build()
     }
 
 }
