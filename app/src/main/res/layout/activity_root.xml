@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RecyclerView最短刷新时间间隔（0秒 - 2.0秒）：" />
+
+    <EditText
+        android:id="@+id/minRefreshTimeEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0.6"
+        android:inputType="numberDecimal" />
+
+
+    <TextView
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="缓存区最多消息数量（即：上面的0.n秒内收到多于x条消息就会被丢弃）：" />
+
+    <EditText
+        android:id="@+id/maxCacheEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="5"/>
+
+    <Button
+        android:layout_marginTop="18dp"
+        android:id="@+id/to_live_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="进入直播间"/>
+
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/body_ll"
+    android:layout_width="match_parent"
+    android:background="@mipmap/live_background"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/insert_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="18dp"
+            android:textColor="#000"
+            android:gravity="center_vertical"
+            android:text="开始插入"></Button >
+
+        <Button
+            android:id="@+id/insert_infinite_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="18dp"
+            android:textColor="#000"
+            android:gravity="center_vertical"
+            android:text="自动每秒插入2条"></Button >
+
+        <Button
+            android:id="@+id/stop_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="18dp"
+            android:textColor="#000"
+            android:gravity="center_vertical"
+            android:text="停止"></Button>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="96dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:requiresFadingEdge="vertical"
+            android:overScrollMode="never" />
+
+        <TextView
+            android:id="@+id/unread_tv"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:text=""
+            android:background="@drawable/live_unread_tips_background"
+            android:drawableEnd="@mipmap/live_unread_tips_arrow"
+            android:drawablePadding="2dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_height="40dp"
+            android:elevation="8dp"
+            android:visibility="gone" >
+
+        </TextView>
+
+    </FrameLayout>
+
+</LinearLayout>

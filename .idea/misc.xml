@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/bg_chat_content.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bg_live_msg.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/corners_danmu.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/dwutv_shape_round_white.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/item_live_message_bg.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/live_imagespan_level.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/live_imagespan_medal.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/live_imagespan_red.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/white_fill_blue_border_rect.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_live_recycleview.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_root.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>

@@ -1,0 +1,3 @@
+rootProject.name = "LiveMessageDemo"
+include ':app'
+include ':liveMessage'
